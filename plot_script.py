@@ -62,5 +62,5 @@ fig = px.bar(
     labels={"elixirCost": "Costo promedio de elixir", "rarity": "Rareza"}
 )
 
-fig.show()
-#fig.write_html("docs/plot.html")
+# fig.show()
+fig.write_html("docs/plot.html")
