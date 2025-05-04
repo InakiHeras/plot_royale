@@ -48,6 +48,9 @@ hits = res["hits"]["hits"]
 data = [hit["_source"] for hit in hits]
 plot_df = pd.DataFrame(data)
 
+print("Columnas disponibles en plot_df:", plot_df.columns)
+print(plot_df.head())
+
 # Agrupar por rareza y calcular el promedio de elixir
 plot_df_grouped = plot_df.groupby("rarity", as_index=False)["elixirCost"].mean()
 
