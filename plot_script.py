@@ -16,7 +16,7 @@ import time
 
 # Dataset
 df = pd.read_csv("clash_royale_cards.csv")
-# print(df)
+print(df)
 
 # Sustituir valores nulos NaN por None
 df = df.replace({np.nan: None})
