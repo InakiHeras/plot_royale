@@ -12,7 +12,6 @@ from elasticsearch import Elasticsearch
 import pandas as pd
 import numpy as np
 import plotly.express as px
-import time
 
 # Dataset
 df = pd.read_csv("clash_royale_cards.csv")
@@ -22,7 +21,6 @@ print(df)
 df = df.replace({np.nan: None})
 
 # Conexión a Elasticsearch
-time.sleep(30)
 es = Elasticsearch("http://localhost:9200")
 
 # Creación de indice
@@ -64,4 +62,5 @@ fig = px.bar(
     labels={"elixirCost": "Costo promedio de elixir", "rarity": "Rareza"}
 )
 
-fig.write_html("docs/plot.html")
+fig.show()
+#fig.write_html("docs/plot.html")
